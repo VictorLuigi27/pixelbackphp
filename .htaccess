@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /pixel/
+RewriteRule ^api/games$ api.php [L]
+RewriteRule ^api/games/update$ api.php [L]
+RewriteRule ^api/games/delete$ api.php [L]
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
